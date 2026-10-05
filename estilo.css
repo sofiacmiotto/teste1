@@ -13,15 +13,15 @@
 
 /* ---------- VARIÁVEIS: a paleta em um só lugar ---------- */
 :root {
-    --verde: #10B981;      /* cor principal da marca */
-    --roxo: #7C3AED;       /* cor de apoio */
-    --ciano: #00D4FF;      /* destaque do CTA */
-    --escuro: #0D0D1A;     /* fundo escuro */
-    --claro: #F8FAFC;      /* texto claro */
+    --verde: #fbf4Eb;      /* cor principal da marca */
+    --roxo:  #f283af;       /* cor de apoio */
+    --ciano: #fbd9e5;      /* destaque do CTA */
+    --fundo: #fbf4Eb;     /* fundo claro */
+    --claro: #c43670;      /* texto escuro */
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     background: var(--escuro);
     color: var(--claro);
     /* var(): usa a variável declarada acima — mude ali, muda tudo */
