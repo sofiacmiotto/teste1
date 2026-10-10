@@ -1,5 +1,5 @@
 /* ==================================================
-   ESTILO.CSS — Landing Page GreenNest
+   ESTILO.CSS — Landing Page Pink Passport
    Cada bloco estiliza uma seção do index.html
    ================================================== */
 
@@ -13,16 +13,17 @@
 
 /* ---------- VARIÁVEIS: a paleta em um só lugar ---------- */
 :root {
-    --verde: #fbf4Eb;      /* cor principal da marca */
-    --roxo:  #f283af;       /* cor de apoio */
-    --ciano: #fbd9e5;      /* destaque do CTA */
-    --fundo: #fbf4Eb;     /* fundo claro */
-    --claro: #c43670;      /* texto escuro */
+    --verde: #f88cb4;      /* rosa-claro da barra de navegação */
+    --roxo: #E85D9E;       /* rosa principal */
+    --ciano: #F283AF;      /* destaque do CTA */
+    --fundo: #FEE4F1;      /* fundo rosa do site */
+    --claro: #931c3e;      /* texto escuro */
+    --escuro: #FFF7FB;     /* fundo claro */
 }
 
 body {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    background: var(--escuro);
+    background: var(--fundo);
     color: var(--claro);
     /* var(): usa a variável declarada acima — mude ali, muda tudo */
 }
@@ -33,82 +34,90 @@ header {
     justify-content: space-between; /* um em cada ponta */
     align-items: center;
     padding: 16px 40px;
-    position: sticky;              /* fica FIXO ao rolar a página */
+    position: sticky;               /* fica FIXO ao rolar a página */
     top: 0;
-    background: var(--escuro);
+    z-index: 10;
+    background: var(--verde);       /* barra com cor diferente do fundo */
     border-bottom: 1px solid var(--roxo);
 }
 
 nav a {
     color: var(--claro);
-    text-decoration: none;         /* tira o sublinhado do link */
+    text-decoration: none;          /* tira o sublinhado do link */
     margin-left: 24px;
 }
 
 nav a:hover {
-    color: var(--ciano);           /* muda a cor ao passar o mouse */
+    color: var(--roxo);             /* muda a cor ao passar o mouse */
 }
 
 /* ---------- HERO: ocupa a tela inteira ---------- */
 .hero {
-    min-height: 100vh;             /* 100% da altura da tela */
+    min-height: 100vh;              /* 100% da altura da tela */
     display: flex;
-    align-items: center;           /* centraliza verticalmente */
+    align-items: center;            /* centraliza verticalmente */
     justify-content: space-around;
     padding: 40px;
 }
 
 .hero-texto h2 {
     font-size: 48px;
-    line-height: 1.2;              /* espaçamento entre linhas */
+    line-height: 1.2;               /* espaçamento entre linhas */
 }
 
 .hero-texto p {
     margin: 16px 0 24px;
-    color: #B8C5D6;
+    color: #80536D;
 }
 
 /* ---------- CTA: o botão que converte ---------- */
 .botao-cta {
     display: inline-block;
     background: var(--ciano);
-    color: var(--escuro);
+    color: var(--claro);
     padding: 16px 40px;
-    border-radius: 12px;           /* cantos arredondados */
+    border-radius: 12px;            /* cantos arredondados */
     text-decoration: none;
     font-weight: bold;
-    transition: transform 0.2s;    /* animação suave */
+    transition: transform 0.2s;     /* animação suave */
 }
 
 .botao-cta:hover {
-    transform: scale(1.05);        /* cresce 5% ao passar o mouse */
+    transform: scale(1.05);         /* cresce 5% ao passar o mouse */
 }
 
-/* ---------- SHOWCASE: grid de produtos ---------- */
+/* ---------- SHOWCASE: grid de pacotes de viagens ---------- */
 .grade-produtos {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     /* 4 colunas iguais — o grid se adapta sozinho */
-    gap: 24px;                     /* espaçamento entre os cards */
-    list-style: none;              /* tira as bolinhas da lista */
+    gap: 24px;                      /* espaçamento entre os cards */
+    list-style: none;               /* tira as bolinhas da lista */
     padding: 40px;
 }
 
 .card {
-    background: #151526;
+    background: #FFFFFF;
     border: 1px solid var(--roxo);
     border-radius: 12px;
     padding: 16px;
     text-align: center;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.03);
 }
 
 .card img {
-    width: 100%;                   /* imagem ocupa o card todo */
-    border-radius: 8px;
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .preco {
-    color: var(--verde);
+    color: #C43670;
     font-weight: bold;
     font-size: 20px;
 }
@@ -122,36 +131,41 @@ nav a:hover {
 }
 
 .depoimento {
-    background: #151526;
+    background: #FFFFFF;
     border: 1px solid var(--roxo);
     border-radius: 12px;
     padding: 24px;
     text-align: center;
+    transition: transform 0.2s;
+}
+
+.depoimento:hover {
+    transform: translateY(-5px) scale(1.03);
 }
 
 .depoimento img {
-    border-radius: 50%;            /* foto redonda! */
+    border-radius: 50%;             /* foto redonda! */
     width: 80px;
     height: 80px;
 }
 
 /* ---------- FAQ: estilizando o acordeão nativo ---------- */
 details {
-    background: #151526;
+    background: #FFFFFF;
     border: 1px solid var(--roxo);
     border-radius: 8px;
     padding: 16px 24px;
-    margin: 12px 40px;             /* 12px em cima/baixo, 40px nos lados */
+    margin: 12px 40px;              /* 12px em cima/baixo, 40px nos lados */
 }
 
 summary {
-    cursor: pointer;               /* mãozinha ao passar o mouse */
+    cursor: pointer;                /* mãozinha ao passar o mouse */
     font-weight: bold;
 }
 
 details p {
     margin-top: 12px;
-    color: var(--verde);
+    color: #80536D;
 }
 
 /* ---------- FOOTER + NEWSLETTER ---------- */
@@ -170,8 +184,8 @@ footer {
 
 .newsletter button {
     padding: 12px 24px;
-    background: var(--verde);
-    color: var(--escuro);
+    background: var(--roxo);
+    color: #FFFFFF;
     border: none;
     border-radius: 8px;
     font-weight: bold;
@@ -180,7 +194,7 @@ footer {
 
 .copyright {
     margin-top: 24px;
-    color: #8894a8;
+    color: #80536D;
     font-size: 14px;
 }
 
@@ -188,7 +202,7 @@ footer {
 /* Abaixo de 800px, o layout se adapta ao celular */
 @media (max-width: 800px) {
     .hero {
-        flex-direction: column;    /* texto em cima, imagem embaixo */
+        flex-direction: column;     /* texto em cima, imagem embaixo */
         text-align: center;
     }
 
